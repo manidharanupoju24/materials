@@ -7,3 +7,4 @@
 ##### Available files
 
 _S3 Practical demo_
+_Argo CD Practical demo_
