@@ -1,0 +1,50 @@
+List of actions for S3 bucket : 
+
+1) create one s3 bucket 
+	give unique name for s3 bucket
+	region select your region
+	block all public access keep intact
+	versioning - disable by default
+	server-side encryption - disable by default and create 
+2) upload an object
+	google html5 free templates download
+	select html5up.net
+	download one template and extract it
+	upload all files and folders into s3 bucket
+3) access file over browser
+	by default, you’ll have block all public access. You won’t be able to access the files
+    go to bucket settings and check the last 2 bucket settings (for this demo you can disable all)
+4) enable acl on object and try accessing on browser
+	go to index.html
+	go to permissions and edit 
+	give read permissions for everyone (public access). Read the warnings and accept
+	*** In order to do above steps, you need to enable all for bucket itself ***
+	*** the above steps pertain to only object index.html. ACL permissions if applied at bucket level, will expose the whole website*** 
+5) upload second object and try accessing it
+	go to generic.html and try accessing it and see what it shows. 
+6) add bucket policy and try accessing it
+	go to bucket and go to permissions
+	go to bucket policy and edit (If you don’t know how to write policy)
+	use policy generator 
+		s3 bucket policy 
+		effect : allow
+		principal : *
+        AWS service : S3
+		Actions : GetObject
+		ARN : copy bucket ARN and paste in policy generator + /* 
+		generate policy 
+		copy bucket policy and paste in s3 console
+    Save changes 
+    try accessing generic.html in browser
+7) generate presigned url using aws cli
+    delete bucket policy from previous step
+	try accessing generic.html from browser
+	google aws cli s3 
+    Search for presign from available commands and select it 
+    Try this command - aws s3 presign *generic.html s3 uri* --expires-in 60 
+8) try accessing object using presigned url
+    You’ll get a presigned url, copy it and try in browser
+9) enable encryption on s3 bucket
+    Go to s3 bucket 
+	Go to properties 
+    Default encryption - disable to enable and select aws s3 key and save 
