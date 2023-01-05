@@ -9,3 +9,5 @@
 _S3 Practical demo_
 
 _Argo CD Practical demo_
+
+_Adding SSH Keys in Gitlab_
