@@ -1,0 +1,14 @@
+Git client needs to be connected with the remote platform (Gitlab in this case)
+You need to authenticate to gitlab before running git commands
+Your public SSH key must be added to the remote platform
+Steps : 
+1) Go to gitlab
+2) Go to settings (preferences)
+3) Select SSH keys from the left panel
+   Note : Paste you public SSH key, which is usually contained in the file '~/.ssh/id_ed25519.pub' or '~/.ssh/id_rsa.pub' and begins with 'ssh-ed25519' or 'ssh-rsa'. Do not paste your private SSH key, as that can compromise your identity.
+   Reference doc : https://docs.gitlab.com/ee/user/ssh.html
+4) Go to your machine's home directory
+5) Generate an ssh key pair. Ref : https://docs.gitlab.com/ee/user/ssh.html
+5) Go to .ssh folder and search for public key 
+6) Open the file and copy the the public key and add it to the gitlab account https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account
+7) Make sure you copy the entire code and do add key
