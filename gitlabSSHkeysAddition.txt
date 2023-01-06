@@ -12,3 +12,6 @@ Steps :
 5) Go to .ssh folder and search for public key 
 6) Open the file and copy the the public key and add it to the gitlab account https://docs.gitlab.com/ee/user/ssh.html#add-an-ssh-key-to-your-gitlab-account
 7) Make sure you copy the entire code and do add key
+8) After adding the key, run the command : 
+   ssh -T git@gitlab.com 
+9) It will ask if you want to continue. Type yes and you will be authorized to use Gitlab
