@@ -18,14 +18,14 @@ tar -zxvf latest-unix.tar.gz
 ```
 6) Nexus folder contains the binaries and runtime for the application nexus
 7) sonatype-work contains the own configuration for nexus and data (configuration files)
-    > contains the directories for what you configured in nexus itself (like plugins and installations)
-    > contains ip addresses that access nexus
-    c) logs of the nexus app itself 
-    d) contains your uploaded files and metadata
-    e) you can use this folder to backup nexus data (since it contains all the data, storage, configs, plugins that you do in nexus app)
+    * contains the directories for what you configured in nexus itself (like plugins and installations)
+    * contains ip addresses that access nexus
+    * logs of the nexus app itself 
+    * contains your uploaded files and metadata
+    * you can use this folder to backup nexus data (since it contains all the data, storage, configs, plugins that you do in nexus app)
 8) Starting nexus 
-    a) Services should not run with root user permissions for security concerns.
-    b) Best practice : Create a new user for the nexus service. This user should only have the permission for that specific service.
+    * Services should not run with root user permissions for security concerns.
+    * Best practice : Create a new user for the nexus service. This user should only have the permission for that specific service.
 ```
 sudo adduser nexus
 ```
