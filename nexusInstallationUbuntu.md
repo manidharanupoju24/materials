@@ -29,9 +29,9 @@ tar -zxvf latest-unix.tar.gz
 ```
 sudo adduser nexus
 ```
-    c) Run the above command and give password to nexus user
-    d) Check the permissions of nexus directories, and they'll show root user as owner and group (not recommended)
-    e) Change the directory permissions to nexus user that you just created (Make sure that you change nexus version according to your version)
+    * Run the above command and give password to nexus user
+    * Check the permissions of nexus directories, and they'll show root user as owner and group (not recommended)
+    * Change the directory permissions to nexus user that you just created (Make sure that you change nexus version according to your version)
 ```
 chown -R nexus:nexus sonatype-work
 chown -R nexus:nexus nexus-3.45.0-01
