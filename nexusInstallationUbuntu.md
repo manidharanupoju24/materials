@@ -18,8 +18,8 @@ tar -zxvf latest-unix.tar.gz
 ```
 6) Nexus folder contains the binaries and runtime for the application nexus
 7) sonatype-work contains the own configuration for nexus and data (configuration files)
-    a) contains the directories for what you configured in nexus itself (like plugins and installations)
-    b) contains ip addresses that access nexus
+    > contains the directories for what you configured in nexus itself (like plugins and installations)
+    > contains ip addresses that access nexus
     c) logs of the nexus app itself 
     d) contains your uploaded files and metadata
     e) you can use this folder to backup nexus data (since it contains all the data, storage, configs, plugins that you do in nexus app)
