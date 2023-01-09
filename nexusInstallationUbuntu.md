@@ -7,4 +7,7 @@
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk
 ```
-4) Install nexus in /opt mount 
+4) Install nexus in /opt mount
+```
+cd /opt
+```
