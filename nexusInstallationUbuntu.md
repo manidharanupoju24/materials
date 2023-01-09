@@ -1,4 +1,4 @@
-### Installation on nexus repo on ubuntu
+### Installation on nexus repo on ubuntu in AWS
 
 1) Create a t3.medium (minimum specification) instance with ubuntu in AWS.
 2) Open port 22 in security group for SSH
