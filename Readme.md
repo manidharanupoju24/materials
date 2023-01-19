@@ -13,3 +13,5 @@ _Argo CD Practical demo_
 _Adding SSH Keys in Gitlab_
 
 _Nexus Installation in Ubuntu AWS Instance_
+
+_Creating a user in Nexus as admin_
