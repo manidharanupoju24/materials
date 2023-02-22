@@ -42,3 +42,25 @@ docker volume inspect jenkins_home
 ```
 docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker jenkins/jenkins:lts
 ```
+
+14) Now docker would be available in the jenkins container, but you won't be able to run the docker commands as the jenkins user will not have permissions. 
+
+15) You can enter the container as thr root user and add permissions to jenkins user.
+```
+docker exec -u 0 -it f0417b0a332e bash
+```
+Note : Make sure you change the container id, according to your requirement.
+
+16) Give permissions to jenkins user to run docker after you login as root. 
+```
+chmod 666 /var/run/docker.sock
+```
+
+17) Now login as jenkins user again and check if you can run docker commands 
+```
+docker exec -it f0417b0a332e bash
+docker pull redis
+docker ps
+```
+
+18) You should be able to run and this basically means that you can execute docker commands from Jenkins UI client, in job as a shell command. 
