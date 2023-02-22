@@ -66,3 +66,10 @@ docker ps
 ```
 
 18) You should be able to run and this basically means that you can execute docker commands from Jenkins UI client, in job as a shell command.
+
+19) Now in your Jenkins job, add a build step to run shell command and run :
+```
+docker build -t test-image-name .
+```
+
+20) The above step will help you build a local docker image in jenkins server. 
