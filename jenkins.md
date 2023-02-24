@@ -73,3 +73,27 @@ docker build -t test-image-name .
 ```
 
 20) The above step will help you build a local docker image in jenkins server. 
+
+### Pushing Docker Image to dockerhub
+
+21) In the "Build environment" section of a jenkins job, select "Use secret text(s) or file(s)"
+
+22) This will show a pre-installed plugin called "Bindings"
+
+23) Add environment variable username as "USERNAME" and password as "PASSWORD"
+
+24) Use the credentials that you configured for you private docker hub registry
+
+#### Adding credentials in Jenkins
+
+> Manage Jenkins --> Manage Credentials --> Select default domain --> Add credentials --> Name it and add username and password
+
+25) In build step of the Job, do this (change according to your requirement)
+```
+docker build -t uchihaitachi24/my-private-repo:jma-1.1 .
+
+echo $PASSWORD | docker login -u $USERNAME --password-stdin
+docker push uchihaitachi24/my-private-repo:jma-1.1
+```
+
+26) You can run the job and check if docker image is updated in dockerhub
